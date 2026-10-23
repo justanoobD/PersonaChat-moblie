@@ -93,4 +93,4 @@ app/build/outputs/apk/release/app-release.apk
 - `SkillParser` 不依赖 Android，可单独做解析烟雾测试。
 - DeepSeek 请求默认关闭思考模式（`"thinking": {"type": "disabled"}`），让角色对话回复更快。
 - 上下文最多带最近约 24,000 字符，避免历史无限增长。
-
+- release中有生成相应人格skill的ai提示词，可以参考，见“-.skill”
