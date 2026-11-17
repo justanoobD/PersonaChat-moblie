@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/33908189/README.md)
+[README.md](https://github.com/user-attachments/files/34981285/README.md)
 # 人格对话（Persona Chat）
 
 一个自用、不上架的 Android APK：在手机上导入人格 skill，填入 DeepSeek API Key 后直接对话。
@@ -12,6 +12,7 @@
 - ZIP 包自动读取 `SKILL.md`、`agents/openai.yaml` 显示名、`references/*.md` 参考资料
 - 多个人格本地保存、切换、删除
 - **人格工坊**：填写角色设定，让 AI 生成完整人格 skill，自动校验并加入人格选项
+- **提示词编辑 / 复制**：查看并修改当前人格的完整提示词，或一键复制到剪贴板
 - **每个人格独立保存对话**；切换人格不会清空记录
 - **每个角色可单独设置头像**：点头像或设置里的「更换当前人格头像」
 - **每个角色可单独设置聊天背景图**：设置里的「更换当前人格背景」
@@ -31,14 +32,14 @@
 
 ## 安装
 
-1. 把 `PersonaChat-2.0.apk` 传到 Android 手机。
+1. 把 `PersonaChat-2.1.apk` 传到 Android 手机。
 2. 在文件管理器里点开 APK。
 3. 如果系统提示，允许“安装未知应用”。
 4. 安装后打开「人格对话」。
 
 要求 Android 8.0（API 26）及以上。
 
-### 从 1.0–1.4 升级
+### 从 1.0–2.0 升级
 
 保持同一个包名和签名，直接覆盖安装即可。1.0 的单条历史记录会自动迁移到升级时当前选中的人格；独立对话、头像、背景和已导入人格都会保留。
 
@@ -110,3 +111,4 @@ app/build/outputs/apk/release/app-release.apk
 - 头像压缩为 512px JPEG 后保存在 App 私有目录。
 - 背景图同样从相册或文件选择器导入，压缩为最长边 1600px JPEG；聊天区叠加半透明遮罩保证文字可读。
 - 人格工坊使用当前设置里的模型和 API Key，生成内容经 `SkillParser` 校验后写入本地人格列表；不会自动切换当前对话。
+- 提示词编辑页直接修改本地人格的完整 system prompt；保存后从下一条消息开始生效，当前聊天记录不会清空。
